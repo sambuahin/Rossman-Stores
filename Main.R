@@ -22,6 +22,8 @@ trainingData <- merge(trainingData, storeData, by="Store")
 testingData <- merge(testingData, storeData, by="Store")
 
 #clean out the data
+summary(trainingData)
+summary(testingData)
 str(trainingData)
 str(testingData)
 #data contains some NA in some feilds which can be converted to 0
@@ -35,6 +37,7 @@ testingData$Date <- as.Date(testingData$Date)
 trainingData$Date <- as.Date(trainingData$Date)
 
 str(trainingData)
+str(testingData)
 
 #Split and format the dates into days, months and years 
 testingData$month <- as.integer(format(testingData$Date, "%m"))
@@ -95,3 +98,5 @@ results <- data.frame(Id = testingData$Id, Sales = forecst)
 
 #write the reaults to a .csv file
 write.csv(results, file = "results.csv")
+
+results
