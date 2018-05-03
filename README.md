@@ -1,1 +1,2 @@
 # Rossman-Stores
+        In this project, we use datamining and machine learning technique on to extract knowledge from given data to make predictions to sales on a store. This is a real-world problem where data collected from stores over a period of time is manipulated and used to forecast future sales. Root Mean Square Percentage Error Loss technique is used to measure the prediction to make it is 
